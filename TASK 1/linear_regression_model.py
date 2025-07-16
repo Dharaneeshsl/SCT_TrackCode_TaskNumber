@@ -4,8 +4,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 
-train_df = pd.read_csv('task_one/train.csv')
-test_df = pd.read_csv('task_one/test.csv')
+train_df = pd.read_csv('TASK 1/train.csv')
+test_df = pd.read_csv('TASK 1/test.csv')
 
 features = ['GrLivArea', 'BedroomAbvGr', 'FullBath', 'HalfBath']
 X = train_df[features].copy()
@@ -23,9 +23,9 @@ model.fit(X, y)
 predictions = model.predict(X_test)
 
 submission = pd.DataFrame({'Id': test_df['Id'], 'SalePrice': predictions})
-submission.to_csv('task_one/submission.csv', index=False)
+submission.to_csv('TASK 1/submission.csv', index=False)
 
-print('Model trained and predictions saved to task_one/submission.csv')
+print('Model trained and predictions saved to TASK 1/submission.csv')
 
 train_preds = model.predict(X)
 plt.figure(figsize=(8,6))

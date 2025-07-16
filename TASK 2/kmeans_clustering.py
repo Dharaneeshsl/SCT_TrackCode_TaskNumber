@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 
 # Load the dataset
-df = pd.read_csv('Mall_Customers.csv')
+df = pd.read_csv('TASK 2/Mall_Customers.csv')
 
 # Select features for clustering
 X = df[['Annual Income (k$)', 'Spending Score (1-100)']]
@@ -20,7 +20,7 @@ plt.plot(range(1, 11), wcss, marker='o')
 plt.title('The Elbow Method')
 plt.xlabel('Number of clusters')
 plt.ylabel('WCSS')
-plt.savefig('elbow_method.png')
+plt.savefig('TASK 2/elbow_method.png')
 plt.close()
 
 # From the elbow plot, let's choose 5 clusters (common for this dataset)
@@ -39,5 +39,5 @@ plt.title('Clusters of customers')
 plt.xlabel('Annual Income (k$)')
 plt.ylabel('Spending Score (1-100)')
 plt.legend()
-plt.savefig('kmeans_clusters.png')
+plt.savefig('TASK 2/kmeans_clusters.png')
 plt.show() 
